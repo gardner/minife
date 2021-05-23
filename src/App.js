@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Comments from './Comments'
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <li key={post.id}>
           <b>{post.title}</b>
           <p>{post.body}</p>
+          <Comments postId={post.id} />
         </li>
       ))}
     </ul>
